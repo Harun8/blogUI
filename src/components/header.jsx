@@ -6,8 +6,8 @@ import "../css/header.css";
 
 const Header = () => {
   return (
-    <nav className=" p-color navbar  navbar-expand-lg   ">
-      <div className=" p-color  container-fluid mx-auto ">
+    <nav className=" p-color navbar  navbar-expand-lg  mx-5 ">
+      <div className=" p-color  container-fluid  ">
         <a className="navbar-brand " href="#">
           <i class="mx-2 bi bi-box2-heart-fill text-info-emphasis"></i>
           <span className="text-info-emphasis">
