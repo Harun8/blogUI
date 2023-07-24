@@ -1,5 +1,10 @@
-.body {
-  background-color: #61dafb;
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+
+body {
+  font-family: "Prompt", regular;
+}
+.p-color {
+  background-color: #fbf3e0;
 }
 
 .App {

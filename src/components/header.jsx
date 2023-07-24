@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+// import "../App.css";
+import "../css/header.css";
 
 const Header = () => {
   return (
-    <nav className="navbar  navbar-expand-lg bg-body-tertiary ">
-      <div className="container-fluid ">
-        <a className="navbar-brand" href="#">
-          <i class="bi bi-box"></i>
-          Untitled UI journal
+    <nav className=" p-color navbar  navbar-expand-lg   ">
+      <div className=" p-color  container-fluid mx-auto ">
+        <a className="navbar-brand " href="#">
+          <i class="mx-2 bi bi-box2-heart-fill text-info-emphasis"></i>
+          <span className="text-info-emphasis">
+            <b className="fs-6 ">
+              Untitled UI <i className="fs-6">journal</i>
+            </b>
+          </span>
         </a>
         <button
           className="navbar-toggler"
@@ -22,40 +28,51 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
+              <a
+                className="nav-link active text-info-emphasis mx-3"
+                aria-current="page"
+                href="#"
+              >
+                <b>Home </b>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="#">
-                Products <i class="bi bi-plus"></i>
+              <a className="nav-link active text-info-emphasis" href="#">
+                <b>
+                  Products <i class="bi bi-plus"></i>
+                </b>
               </a>
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link  active dropdown-toggle"
+                className="nav-link active  text-info-emphasis"
                 href="#"
                 role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
               >
-                Resources <i class="bi bi-plus"></i>
+                <b>
+                  {" "}
+                  Resources <i class="bi bi-plus"></i>{" "}
+                </b>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Pricing
+              <a
+                className="nav-link active text-info-emphasis"
+                aria-current="page"
+                href="#"
+              >
+                <b> Pricing</b>
               </a>
             </li>
           </ul>
-          <form className="d-flex" role="search">
-            <button className="btn btn-outline-success" type="button">
-              How it works
+          <form className="d-flex mx-5" role="search">
+            <button className="btn btn-outline-success mx-2" type="button">
+              <i class="bi bi-play"></i> How it works
             </button>
 
-            <button className="btn btn-outline-success" type="button">
+            <button className="btn btn-success " type="button">
               Get started
             </button>
           </form>
