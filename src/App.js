@@ -4,15 +4,16 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Navbar from "./components/navbar";
 import Header from "./components/header";
+import RecentPosts from "./components/recentPosts";
 
 function App() {
   return (
     <body class="p-color">
       <Navbar> </Navbar>
 
-      <div>
-        <Header></Header>
-      </div>
+      <Header></Header>
+
+      <RecentPosts></RecentPosts>
     </body>
   );
 }
