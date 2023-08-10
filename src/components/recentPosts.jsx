@@ -27,14 +27,20 @@ const RecentPosts = () => {
   return (
     <React.Fragment>
       <div className="container">
-        <div className="row justify-content-center ">
-          <div className="col-md-6  ">
+        <div className="row justify-content-center mx-4 ">
+          <div className="col-md-5  ">
             <div className="text-center">
-              <img className="w-100 rounded" src={RecentImg1}></img>
+              <img
+                className="w-100 rounded border-bottom "
+                src={RecentImg1}
+              ></img>
             </div>
             <div>
-              <h5 class="card-title my-4">Card title</h5>
-              <p class="card-text">
+              <h5 class="card-title my-4 underline text-info-emphasis  d-flex justify-content-between">
+                Bill Walsh leadership lessons
+                <i class=" mx-2 bi bi-arrow-up-right-square"></i>
+              </h5>
+              <p class="card-text p-color  text-info-emphasis">
                 This is a wider card with supporting text below as a natural
                 lead-in to additional content. This content is a little bit
                 longer.
@@ -46,18 +52,12 @@ const RecentPosts = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-5 mx-5  ">
-            <div className="">
-              {" "}
+          <div className="col-md-6 mx-3   ">
+            <div className="mx-4">
               <img className="w-50 rounded " src={RecentImg1}></img>
-              <span className="justify content">
-                {" "}
-                This is a wider card with sup
-              </span>
             </div>
-            <div className="mt-5">
-              {" "}
-              <img className="w-50 rounded " src={RecentImg1}></img>
+            <div className="mx-4 mt-5">
+              <img className="w-50 rounded  " src={RecentImg1}></img>
             </div>
           </div>
         </div>
