@@ -53,8 +53,11 @@ const RecentPosts = () => {
             </div>
           </div>
           <div className="col-md-6 mx-3   ">
-            <div className="mx-4">
+            <div className="d-flex align-items-start mx-4">
               <img className="w-50 rounded " src={RecentImg1}></img>
+              <div className="mx-3">
+                <h4>Building your API stack</h4>
+              </div>
             </div>
             <div className="mx-4 mt-5">
               <img className="w-50 rounded  " src={RecentImg1}></img>
