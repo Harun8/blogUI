@@ -1,1 +1,3 @@
 #1 - Add custom background to header
+#2 - RecentPosts comp should extract from an api later on (for now just find an api) -> when it's time implement your own api
+#4 Recentpost comp -> if text is over a certain length show ...

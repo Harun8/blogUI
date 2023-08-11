@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from "react";
 import RecentImg1 from "../images/RecentImg1.jpg";
-
+import bus from "../images/bus.jpg";
 import axios from "axios";
 import "../css/header.css";
 
@@ -26,13 +26,13 @@ const RecentPosts = () => {
 
   return (
     <React.Fragment>
-      <div className="container">
-        <div className="row justify-content-center mx-4 ">
-          <div className="col-md-5  ">
+      <div className="container-fluid mx-4">
+        <div className="row justify-content-left mx-4 ">
+          <div className="col-md-6  ">
             <div className="text-center">
               <img
-                className="w-100 rounded border-bottom "
-                src={RecentImg1}
+                className=" custom-height img-fluid w-100 rounded border-bottom "
+                src={bus}
               ></img>
             </div>
             <div>
@@ -52,15 +52,42 @@ const RecentPosts = () => {
               </p>
             </div>
           </div>
-          <div className="col-md-6 mx-3   ">
+          <div className="col-md-5 mx-4   ">
             <div className="d-flex align-items-start mx-4">
               <img className="w-50 rounded " src={RecentImg1}></img>
               <div className="mx-3">
-                <h4>Building your API stack</h4>
+                <p className="fs-5">Building your API stack</p>
+                <p className="fs-6">
+                  The rise of RESTful APIs has been met by a rise in tools for
+                  creating ..
+                </p>
+                <p className="  fs-6 border border-success d-inline-block px-2 rounded ">
+                  {" "}
+                  Design{" "}
+                </p>
+                <p className="  mx-3 fs-6 border border-success d-inline-block px-2 rounded ">
+                  {" "}
+                  Design{" "}
+                </p>
               </div>
             </div>
-            <div className="mx-4 mt-5">
-              <img className="w-50 rounded  " src={RecentImg1}></img>
+            <div className="d-flex align-items-start mx-4 mt-5">
+              <img className="w-50 rounded " src={RecentImg1}></img>
+              <div className="mx-3">
+                <p className="fs-5">Building your API stack</p>
+                <p className="fs-6">
+                  The rise of RESTful APIs has been met by a rise in tools for
+                  creating ..
+                </p>
+                <p className="  fs-6 border border-success d-inline-block px-2 rounded ">
+                  {" "}
+                  Design{" "}
+                </p>
+                <p className="  mx-3 fs-6 border border-success d-inline-block px-2 rounded ">
+                  {" "}
+                  Design{" "}
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -8,3 +8,7 @@
 .center {
   text-align: center;
 }
+.custom-height {
+  height: 300px; /* Set the height you want */
+  object-fit: cover; /* If it's an image and you want it to maintain aspect ratio */
+}
