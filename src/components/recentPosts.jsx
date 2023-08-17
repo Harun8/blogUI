@@ -10,7 +10,9 @@ const RecentPosts = () => {
   // https://dummyjson.com/docs/image
   useEffect(() => {
     axios
-      .get("https://image.dummyjson.com/400x200/008080/ffffff?text=Hello+Peter")
+      .get(
+        "https://image.dummyjson.com/600x300/282828/ffffff?text=Hello+Peter!&fontFamily=cookie"
+      )
       .then(function(response) {
         setImage(response.config.url);
         console.log(response);
@@ -32,7 +34,7 @@ const RecentPosts = () => {
             <div className="text-center">
               <img
                 className=" custom-height img-fluid w-100 rounded border-bottom "
-                src={bus}
+                src={image}
               ></img>
             </div>
             <div>
