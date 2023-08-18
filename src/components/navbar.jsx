@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/header.css";
+import "bootstrap/dist/js/bootstrap.bundle.min"; // This includes Bootstrap's JavaScript and Popper.js
 
 const Navbar = () => {
   return (
@@ -37,12 +38,36 @@ const Navbar = () => {
                 <b>Home </b>
               </a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link active text-info-emphasis" href="#">
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link active text-info-emphasis dropdown-toggle"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <b>
                   Products <i class="bi bi-plus"></i>
                 </b>
               </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav-item dropdown">
               <a
