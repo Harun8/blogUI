@@ -71,15 +71,34 @@ const Navbar = () => {
             </li>
             <li className="nav-item dropdown">
               <a
-                className="nav-link active  text-info-emphasis"
+                className="nav-link active text-info-emphasis dropdown-toggle"
                 href="#"
                 role="button"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
                 <b>
-                  {" "}
-                  Resources <i class="bi bi-plus"></i>{" "}
+                  Resources <i class="bi bi-plus"></i>
                 </b>
               </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Action
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    Something else here
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav-item">
               <a
