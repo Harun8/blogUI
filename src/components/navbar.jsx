@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/header.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // This includes Bootstrap's JavaScript and Popper.js
+import "../css/navbar.css";
 
 const Navbar = () => {
   return (

@@ -1,0 +1,4 @@
+.nav-item.dropdown:hover .dropdown-menu {
+  /* on hover on navbar*/
+  display: block;
+}
