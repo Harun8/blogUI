@@ -4,6 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/header.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // This includes Bootstrap's JavaScript and Popper.js
 import "../css/navbar.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (

@@ -1,7 +1,8 @@
 import React from "react";
+import "../css/login.css";
 
 const Login = () => {
-  return <h1>Login</h1>;
+  return <div className="background-image"></div>;
 };
 
 export default Login;

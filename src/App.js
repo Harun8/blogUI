@@ -1,35 +1,29 @@
 import "../src/css/App.css";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Navbar from "./components/navbar";
-import Header from "./components/header";
-import RecentPosts from "./components/recentPosts";
-import AllPosts from "./components/allPosts";
-import Footer from "./components/footer";
-import Pagination from "./components/pagination";
-import { Route, Redirect, Switch } from "react-router-dom";
+import { Route, Navigate, Switch, Routes } from "react-router-dom";
+import Login from "./routes/login";
+import MainPage from "./routes/mainPage";
 
+import HowItWorks from "./routes/howItWorks";
+import Pricing from "./routes/pricing";
+import NotFound from "./routes/notFound";
+import SignIn from "./routes/signin";
 function App() {
   return (
-    <body class="p-color">
-      <Switch>
-        <Route path="/login" Component={login}>
+    <div>
+      <Routes>
+        <Route path="/" element={<MainPage></MainPage>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/sign-in" element={<SignIn></SignIn>}>
           {" "}
         </Route>
-      </Switch>
-
-      <Navbar> </Navbar>
-
-      <Header></Header>
-
-      <RecentPosts></RecentPosts>
-
-      <AllPosts></AllPosts>
-
-      <Pagination></Pagination>
-
-      <Footer></Footer>
-    </body>
+        <Route path="/howitworks" element={<HowItWorks> </HowItWorks>}></Route>
+        <Route path="/pricing" element={<Pricing></Pricing>}></Route>
+        <Route path="/not-found" element={<NotFound></NotFound>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
+      </Routes>
+    </div>
   );
 }
 
