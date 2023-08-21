@@ -52,8 +52,11 @@ const Navbar = () => {
                   Products <i class="bi bi-plus"></i>
                 </b>
               </a>
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li>
+              <ul
+                class="dropdown-menu p-color"
+                aria-labelledby="dropdownMenuLink"
+              >
+                <li className=" p-color">
                   <a class="dropdown-item" href="#">
                     Action
                   </a>
