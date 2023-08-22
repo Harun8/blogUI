@@ -120,9 +120,9 @@ const Navbar = () => {
               <i class="bi bi-play"></i> How it works
             </button>
 
-            <button className="btn btn-success " type="button">
+            <NavLink className="btn btn-success" to="/register" type="button">
               Get started
-            </button>
+            </NavLink>
           </form>
         </div>
       </div>
