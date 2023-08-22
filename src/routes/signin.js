@@ -1,6 +1,6 @@
 import React from "react";
 import "../css/login.css";
-
+import { NavLink } from "react-router-dom";
 const SignIn = () => {
   return (
     <div>
@@ -35,7 +35,7 @@ const SignIn = () => {
         </label>
         <button class="submit">Submit</button>
         <p class="signin">
-          Already have an acount ? <a href="#">Signin</a>{" "}
+          Already have an acount ? <NavLink to="/login">Signin</NavLink>{" "}
         </p>
       </form>
     </div>
