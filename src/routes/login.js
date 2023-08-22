@@ -67,7 +67,7 @@ const Login = () => {
       {/* Same as */}
       <ToastContainer pauseOnHover={false} pauseOnFocusLoss={false} />{" "}
       <div className="background-image"></div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form flex" onSubmit={handleSubmit}>
         {" "}
         {/* Note the change here */}
         <p className="title">Login </p> {/* Note the change here */}
