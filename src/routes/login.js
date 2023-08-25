@@ -12,10 +12,12 @@ const Login = () => {
   const schema = Joi.object({
     username: Joi.string()
       .required()
+      .min(3)
       .label("Username"),
 
     password: Joi.string()
       .required()
+      .min(5)
       .label("Password"),
   });
 
@@ -81,7 +83,7 @@ const Login = () => {
             type="username"
             placeholder=""
           />
-          <span>username</span>
+          <span>Username</span>
         </label>
         <label>
           <input
