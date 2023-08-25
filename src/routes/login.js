@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const [account, setAccount] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState({});
+  const [submitDisable, setSubmitDisable] = useState(true);
 
   // Define schema here
   const schema = Joi.object({
@@ -29,10 +30,14 @@ const Login = () => {
 
   // Define validate function here
   const validate = () => {
+    console.log("validate");
     const options = { abortEarly: false };
     const result = Joi.validate(account, schema, options);
 
     if (!result.error) {
+      console.log("no errors");
+      setSubmitDisable(false);
+
       return null;
     }
 
@@ -59,9 +64,11 @@ const Login = () => {
   };
 
   const handleChange = (e) => {
+    console.log("handleChange");
     const newAccount = { ...account };
     newAccount[e.currentTarget.name] = e.currentTarget.value;
     setAccount(newAccount);
+    validate();
   };
   return (
     <div>
@@ -96,7 +103,9 @@ const Login = () => {
           />
           <span>Password</span>
         </label>
-        <button className="submit my-2">Submit</button>{" "}
+        <button className="submit my-2" disabled={submitDisable}>
+          Submit
+        </button>{" "}
         {/* Note the change here */}
         <p className="signin">
           Don't have an account ? <NavLink to="/register">Register</NavLink>{" "}

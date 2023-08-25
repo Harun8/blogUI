@@ -149,6 +149,11 @@ textarea {
   background-color: #4f8d5a;
   cursor: pointer;
 }
+.submit:disabled {
+  cursor: default;
+
+  background-color: #9fc0a5;
+}
 
 @keyframes pulse {
   from {
