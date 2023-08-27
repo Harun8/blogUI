@@ -10,8 +10,6 @@ import "../css/App.css";
 const MainPage = () => {
   return (
     <body class="p-color">
-      <Navbar></Navbar>
-
       <Header></Header>
 
       <RecentPosts></RecentPosts>

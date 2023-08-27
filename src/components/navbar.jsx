@@ -1,12 +1,21 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../css/header.css";
 import "bootstrap/dist/js/bootstrap.bundle.min"; // This includes Bootstrap's JavaScript and Popper.js
 import "../css/navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const [rerender, setRerender] = useState(false);
+  const navigate = useNavigate();
+
+  const logOut = () => {
+    console.log("wow");
+    localStorage.removeItem("Username");
+    // setRerender(!rerender);
+    props.userCheck();
+  };
   return (
     <nav className=" p-color navbar  navbar-expand-lg  mx-5 py-5 ">
       <div className=" p-color  container-fluid  ">
@@ -119,10 +128,29 @@ const Navbar = () => {
             <button className="btn btn-outline-success mx-2" type="button">
               <i class="bi bi-play"></i> How it works
             </button>
-
-            <NavLink className="btn btn-success" to="/register" type="button">
-              Get started
+            <NavLink
+              className="btn btn-success"
+              to={!localStorage.getItem("Username") ? "/register" : "/"}
+              type="button"
+              onClick={logOut}
+            >
+              {localStorage.getItem("Username") ? "Log out" : "Get started"}
             </NavLink>
+
+            {/* {!localStorage.getItem("Username") ? (
+              <NavLink className="btn btn-success" to="/register" type="button">
+                Get started
+              </NavLink>
+            ) : (
+              <NavLink
+                className="btn btn-success"
+                to="/"
+                onClick={logOut}
+                type="button"
+              >
+                Log out{" "}
+              </NavLink>
+            )} */}
           </form>
         </div>
       </div>

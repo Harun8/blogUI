@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Joi from "joi-browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -40,12 +40,14 @@ const Login = () => {
 
       return null;
     }
+    setSubmitDisable(true);
 
     const errors = {};
 
     for (let item of result.error.details) {
       errors[item.path[0]] = item.message;
     }
+
     return errors;
   };
 
@@ -61,6 +63,8 @@ const Login = () => {
 
       return;
     }
+
+    localStorage.setItem("Username", account.username);
   };
 
   const handleChange = (e) => {
@@ -104,7 +108,7 @@ const Login = () => {
           <span>Password</span>
         </label>
         <button className="submit my-2" disabled={submitDisable}>
-          Submit
+          <Link to="/"> Submit </Link>
         </button>{" "}
         {/* Note the change here */}
         <p className="signin">
