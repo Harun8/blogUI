@@ -1,3 +1,8 @@
-#1 - Add custom background to header
-#2 - RecentPosts comp should extract from an api later on (for now just find an api) -> when it's time implement your own api
-#4 Recentpost comp -> if text is over a certain length show ...
+Goal:
+# Frontend -> React
+# Backend -> 
+          - V1. NodeJs/ExpressJs
+          - V2. Java/Spring boot
+# Database ->
+          - V1. MongoDB
+          - V2. PostgresSQL
