@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink , useNavigate} from "react-router-dom";
 import Joi from "joi-browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [account, setAccount] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState({});
   const [submitDisable, setSubmitDisable] = useState(true);
@@ -65,6 +67,7 @@ const Login = () => {
     }
 
     localStorage.setItem("Username", account.username);
+    navigate('/');
   };
 
   const handleChange = (e) => {
@@ -74,6 +77,8 @@ const Login = () => {
     setAccount(newAccount);
     validate();
   };
+
+
   return (
     <div>
       <ToastContainer />
@@ -107,8 +112,9 @@ const Login = () => {
           />
           <span>Password</span>
         </label>
-        <button className="submit my-2" disabled={submitDisable}>
-          <Link to="/"> Submit </Link>
+        <button className="submit my-2"  disabled={submitDisable}>
+          {/* <Link to="/"> Submit </Link> */}
+          Submit
         </button>{" "}
         {/* Note the change here */}
         <p className="signin">
