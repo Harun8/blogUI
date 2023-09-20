@@ -9,14 +9,15 @@ import HowItWorks from "./routes/howItWorks";
 import Pricing from "./routes/pricing";
 import NotFound from "./routes/notFound";
 import SignIn from "./routes/signin";
+import Post from "./components/post";
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<MainPage></MainPage>}></Route>
+        <Route path="/post/:id" element={<Post></Post>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<SignIn></SignIn>}>
-          {" "}
         </Route>
         <Route path="/howitworks" element={<HowItWorks> </HowItWorks>}></Route>
         <Route path="/pricing" element={<Pricing></Pricing>}></Route>

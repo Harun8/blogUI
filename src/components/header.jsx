@@ -7,19 +7,24 @@ const Header = () => {
   const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
-    const userCheck = () => {
+ 
+    userCheck();
+  }, [localStorage.length]); // Empty dependency array means this useEffect runs once when the component mounts
+   const userCheck = () => {
+
+    console.log("activated");
       const storedUsername = localStorage.getItem("Username");
       if (storedUsername) {
         setUsername(storedUsername);
         setLoggedIn(true);
+      } else if (!localStorage.getItem("Username")) {
+        setUsername("")
+        setLoggedIn(false)
       }
     };
-    userCheck();
-  }, []); // Empty dependency array means this useEffect runs once when the component mounts
-
   return (
     <React.Fragment>
-      <Navbar></Navbar>
+      <Navbar userCheck={userCheck}></Navbar>
       <div class="card p-color removeBorder center  ">
         <div class="card-body ">
           <b>

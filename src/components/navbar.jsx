@@ -132,7 +132,7 @@ const Navbar = (props) => {
               className="btn btn-success"
               to={!localStorage.getItem("Username") ? "/register" : "/"}
               type="button"
-              onClick={logOut}
+              onClick={ localStorage.getItem("Username") ? logOut : null}
             >
               {localStorage.getItem("Username") ? "Log out" : "Get started"}
             </NavLink>

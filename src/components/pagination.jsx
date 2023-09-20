@@ -1,6 +1,9 @@
 import React from "react";
 
-const Pagination = () => {
+const Pagination = ({onNextPage}) => {
+
+
+
   return (
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-between">
@@ -10,7 +13,7 @@ const Pagination = () => {
           </a>
         </li>
 
-        <div class="d-flex">
+        {/* <div class="d-flex">
           <li class="page-item">
             <a class="page-link" href="#">
               1
@@ -26,12 +29,12 @@ const Pagination = () => {
               3
             </a>
           </li>
-        </div>
+        </div> */}
 
         <li class="page-item mx-5">
-          <a class="page-link" href="#">
+          <button className="page-link" onClick={onNextPage}>
             Next
-          </a>
+          </button>
         </li>
       </ul>
     </nav>

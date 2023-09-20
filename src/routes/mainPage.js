@@ -16,7 +16,7 @@ const MainPage = () => {
 
       <AllPosts></AllPosts>
 
-      <Pagination></Pagination>
+      {/* <Pagination></Pagination> */}
 
       <Footer></Footer>
     </body>
